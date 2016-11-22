@@ -22,18 +22,21 @@ class Rectangle(Shape):
     def perimeter(self):
         return self.width*2 + self.height*2
 
-
-
 class Square(Rectangle):
     def __init__(self, sidelength):
         self.sidelength = sidelength
         super(Square, self).__init__(sidelength, sidelength)
+
+# rect = Rectangle(5, 10)
+# print rect.area()
+# print rect.perimeter()
+
 s = Square(5)
 print s.area()
 print s.perimeter()
 
 
-
+# How to use abstraction and interfaces and also how to to overide
 
 # rect = Rectangle(6,10)
 # print rect.area()
