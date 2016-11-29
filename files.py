@@ -64,6 +64,16 @@ class FileSpecification(FileHandling):
                 if file.endswith(".txt"):
                     new_src_txt = src_txt + file
                     shutil.move(new_src_txt, "files/TEXT")
+            read_file =open("files/TEXT/copying.txt", "r")
+            test = read_file.readlines()
+            new_line = []
+            for i in test:
+                lines = i.split()
+                new_line.append(lines)
+            line_by_line = new_line[:5]
+            for c in line_by_line:
+                print " ".join(c)
+            read_file.close()
         except:
             return "File already Exists"
 
@@ -75,10 +85,10 @@ class FileSpecification(FileHandling):
                 if file.endswith(".png"):
                     new_src_png = src_png + file
                     shutil.move(new_src_png, "files/PNG")
-                with Image.open(file) in im:
-                    width, height = im.size
-            return im.size
-            print im.size
+            #     with Image.open(file) in im:
+            #         width, height = im.size
+            # return im.size
+            # print im.size
 
 
         except:
